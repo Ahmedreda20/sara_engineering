@@ -1,100 +1,102 @@
-import React, { useEffect } from "react";
-import {createBrowserRouter , RouterProvider} from "react-router-dom";
-import Layout from './components/layout/Layout';
-import {About,Home, Contact, SingleProject, Privacy, Projects, BuildingAutomation, IndustrialAutomation, News, OurCompanies ,EnergyMonitoring, WiringDevices, ElectricVehiclesChargers, SingleNews} from "./pages"
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout from "./components/layout/Layout";
+import {
+  About,
+  BuildingAutomation,
+  Contact,
+  ElectricVehiclesChargers,
+  EnergyMonitoring,
+  Home,
+  IndustrialAutomation,
+  News,
+  OurCompanies,
+  Privacy,
+  Projects,
+  SingleNews,
+  SingleProject,
+  WiringDevices,
+} from "./pages";
 /* import Aos from "aos"; */
 /* import 'aos/dist/aos.css' */
 const App = () => {
-/*   useEffect(() => {
+  /*   useEffect(() => {
     Aos.init({duration: 1000});
   }, []) */
   const router = createBrowserRouter([
     {
-      path:"/",
-      element:<Layout />,
+      path: "/",
+      element: <Layout />,
       /* errorElement:<Erorrpage />, */
-      children:[
+      children: [
         {
-         element: <Home />,
-          index:true,
-          
+          element: <Home />,
+          index: true,
         },
         {
-          path:"about",
-          element: <About/>
-          
+          path: "about",
+          element: <About />,
         },
         {
-          path:"buildingAutomation",
-          element: <BuildingAutomation/>
-          
+          path: "buildingAutomation",
+          element: <BuildingAutomation />,
         },
         {
-          path:"industrialAutomation",
-          element: <IndustrialAutomation/>
-          
+          path: "industrialAutomation",
+          element: <IndustrialAutomation />,
         },
         {
-          path:"energyMonitoring",
-          element: <EnergyMonitoring/>
-          
+          path: "energyMonitoring",
+          element: <EnergyMonitoring />,
         },
         {
-          path:"wiringDevices",
-          element: <WiringDevices/>
-          
+          path: "wiringDevices",
+          element: <WiringDevices />,
         },
         {
-          path:"electricVehiclesChargers",
-          element: <ElectricVehiclesChargers/>
-          
+          path: "electricVehiclesChargers",
+          element: <ElectricVehiclesChargers />,
         },
         {
-          path:"ourCompanies",
-          element: <OurCompanies/>
-          
+          path: "ourCompanies",
+          element: <OurCompanies />,
         },
         {
-          path:"news",
-          element: <News/>
-          
+          path: "news",
+          element: <News />,
         },
         {
-          path:"singleNews/:id",
-          element: <SingleNews />
-          
+          path: "singleNews/:id",
+          element: <SingleNews />,
         },
         {
-          path:"contact",
-          element: <Contact />
-          
+          path: "contact",
+          element: <Contact />,
         },
         {
-          path:"privacy",
-          element: <Privacy />
-          
+          path: "privacy",
+          element: <Privacy />,
         },
         {
-          path:"projects",
-          element: <Projects />
-          
+          path: "projects",
+          element: <Projects />,
         },
         {
-          path:"singleProject/:id",
-          element: <SingleProject />
-          
-        }
-      ]
-  
+          path: "categories/:categoryId",
+          element: <SingleProject />,
+        },
+        {
+          path: "categories/:categoryId/:subCategoryId",
+          element: <SingleProject />,
+        },
+      ],
     },
-  ])
-    return (
-      <React.Fragment>
+  ]);
+  return (
+    <React.Fragment>
       <RouterProvider router={router} />
     </React.Fragment>
-    );
+  );
+};
 
-  
-}
-
-export default App
+export default App;

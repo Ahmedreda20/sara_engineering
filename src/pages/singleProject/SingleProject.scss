@@ -1,0 +1,46 @@
+@import "../../components/variables/Variables.scss";
+
+.single_project {
+  padding: $padding_80;
+  .title_top {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    color: $blue_1;
+    h2 {
+      text-transform: capitalize;
+    }
+    p {
+      font-size: $font_14;
+    }
+  }
+
+  .filter-data {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // background-color: white;
+    // padding: 50px 0 20px;
+    // background-color: white;
+    .unqe-catgery {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .btn-more {
+      font-size: 14px;
+      border: none;
+      color: $blue_1;
+      text-transform: capitalize;
+      padding: 5px 15px;
+      transition: $transition;
+      background-color: transparent;
+      font-weight: 600;
+    }
+    .active {
+      color: $green_1;
+    }
+  }
+}
