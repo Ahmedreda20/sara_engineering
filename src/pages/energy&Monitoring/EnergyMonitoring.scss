@@ -1,0 +1,126 @@
+@import "../../components/variables/Variables.scss";
+
+.energy_Monitoring_wrapper {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    .energy_content {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        .image {
+            width: 48%;
+            img {
+                width: 100%;
+            }
+        }
+        .content_text {
+            width: 52%;
+            color: $blue_1;
+            padding: 0 80px;
+            h2 {
+                margin-bottom: 20px;
+            }
+            p {
+                margin: 15px 0;
+                font-size: $font_16;
+                line-height: 1.7;
+            }
+            .brand_images {
+                margin-top: 50px;
+                display: flex;
+                gap: 30px;
+                img {
+                    width: 100px;
+                    height: 30px;
+                }
+            }
+        }
+        .arrow_icon {
+            position: absolute;
+            bottom: 0;
+            svg {
+                font-size: $font_32;
+                color: $green_1;
+            }
+        }
+    }
+}
+
+
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    .energy_Monitoring_wrapper {
+        overflow: hidden;
+        .energy_content {
+            flex-direction: column;
+            gap: 50px;
+            .image {
+                width: 100%;
+                order: 2 !important;
+            }
+            .content_text {
+                width: 100%;
+                padding: 0 20px;
+                order: 1 !important;
+                .brand_images {
+                    flex-wrap: wrap;
+                }
+            }
+            .arrow_icon {
+                bottom: 20px;
+            }
+        }
+    }
+ }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .energy_Monitoring_wrapper {
+        overflow: hidden;
+        .energy_content {
+            flex-direction: column;
+            gap: 50px;
+            .image {
+                width: 100%;
+                order: 2 !important;
+            }
+            .content_text {
+                width: 100%;
+                padding: 0 20px;
+                order: 1 !important;
+                .brand_images {
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .energy_Monitoring_wrapper {
+        overflow: hidden;
+        .energy_content {
+            flex-direction: column;
+            gap: 50px;
+            .image {
+                width: 100%;
+                order: 2 !important;
+            }
+            .content_text {
+                width: 100%;
+                padding: 0 20px;
+                order: 1 !important;
+                .brand_images {
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+ }

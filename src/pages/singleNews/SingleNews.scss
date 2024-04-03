@@ -1,0 +1,164 @@
+@import "../../components/variables/Variables.scss";
+
+.single_news_wrapper {
+    padding: $padding_80;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    .single_news_content {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        .image {
+            width: 48%;
+            img {
+                width: 100%;
+            }
+        }
+        .content_text {
+            width: 52%;
+            padding: 0 80px;
+            color: $blue_1;
+            h2 {
+                margin-bottom: 20px;
+            }
+            p {
+                margin: 15px 0;
+                font-size: $font_16;
+                line-height: 1.7;
+            }
+            .brand_images {
+                margin-top: 50px;
+                display: flex;
+                gap: 30px;
+                img {
+                    width: 100px;
+                    height: 30px;
+                }
+            }
+            .date {
+                text-align: right;
+                width: 100%;
+              height: 100%;
+              font-size: $font_14;
+              padding-top: 20px;
+              }
+              .read_more_btn {
+                padding: 50px 0;
+                a {
+                    color: white;
+                    text-transform: capitalize;
+                    padding: 10px 20px;
+                    font-size: $font_14;
+                    text-align: center;
+                    background-color: $blue_1;
+                    transition: $transition;
+                    &:hover {
+                        background-color: $green_1;
+                    }
+                }
+              }
+        }
+        .arrow_icon {
+            position: absolute;
+            bottom: 0;
+            svg {
+                font-size: $font_32;
+                color: $green_1;
+            }
+        }
+    }
+}
+
+
+/* news Slider */
+
+.newsSlider {
+    padding: $padding_80;
+    overflow: hidden;
+    .slick-slider {
+        .slick-arrow {
+            background-color: $green_1;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            box-shadow: 0 0 20px 0px rgba(158, 158, 158, 0.479);
+            transition: $transition;
+            color: $blue_1;
+            &:hover {
+                background-color: $blue_1;
+                color: $white_1 !important
+            }
+        }
+        .slick-next:before,
+        .slick-prev:before {
+            display: none;
+        }
+        .slick-next {
+            right: -10px;
+        }
+        .slick-prev {
+            left: -10px;
+        }
+        .slick-list {
+            padding: 20px 0 !important;
+            margin-top: 50px;
+            .slick-track {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                .slick-slide {
+                    border-radius: 20px;
+                    text-align: start;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    overflow: hidden;
+                    .items {
+                        width: 100%;
+                        height: 532px;
+                        border-radius: 8px;
+                        overflow: hidden;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+
+                    }
+                }
+
+                
+            }
+        }
+    }
+
+}
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    .newsSlider {
+        .slick-slider {
+            .slick-arrow {
+                display: none;
+            }
+            .slick-next:before,
+            .slick-prev:before {
+                display: none;
+            }
+        }
+        .solutions-title {
+            p {
+                max-width: 90%;
+                line-height: 1.7;
+            }
+        }
+    }
+ }

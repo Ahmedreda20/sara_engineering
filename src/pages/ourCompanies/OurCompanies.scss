@@ -1,0 +1,60 @@
+@import "../../components/variables/Variables.scss";
+
+.our_Companies_wrapper {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    .our_Companies_content {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        .image {
+            width: 48%;
+            img {
+                width: 100%;
+            }
+            .go_to_site {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                svg {
+                    font-size: $font_26;
+                }
+                .go {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    p {
+                        font-size: $font_14;
+                        color: $blue_1;
+                    }
+                    svg {
+                        font-size: $font_26;
+                    }
+                }
+            }
+        }
+        .content_text {
+            width: 52%;
+            padding: 0 80px;
+            color: $blue_1;
+            p {
+                margin: 15px 0;
+                font-size: $font_16;
+                line-height: 1.7;
+                margin-top: 30px;
+            }
+            .brand_images {
+                margin-top: 50px;
+                display: flex;
+                gap: 30px;
+                img {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+        }
+    }
+}
